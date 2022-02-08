@@ -73,21 +73,6 @@ function App() {
       <header>
       <h1>Weather App</h1>
       </header>
-
-      <WeatherSearch 
-      address={address}   setAddress={setAddress}
-      weather={weather}   setWeather={setWeather}
-      location={location} setLocation={setLocation}/>
-      
-      
-      <CurrentWeather 
-      weather={weather}
-      location={location}
-      convertTemp={convertTemp}
-      getDate={getDate}
-      getTime={getTime}  
-      />
-      
       <div>
       <Router>
       <Forecast/>
@@ -117,6 +102,20 @@ function App() {
         </Routes>
       </Router>
       </div>
+      <WeatherSearch 
+      address={address}   setAddress={setAddress}
+      weather={weather}   setWeather={setWeather}
+      location={location} setLocation={setLocation}/>
+      
+      
+      <CurrentWeather 
+      weather={weather}
+      location={location}
+      convertTemp={convertTemp}
+      getDate={getDate}
+      getTime={getTime}  
+      />
+      
       
       
       

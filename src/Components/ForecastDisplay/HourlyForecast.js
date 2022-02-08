@@ -3,9 +3,11 @@ import Grid from '@material-ui/core/Grid';
 import HourReport from './HourReport'
 import { useState,useEffect } from 'react'
 
+import {Navigate} from 'react-router-dom'
+
 
 export default function HourlyForecast(props){
-    
+  if (props.weather != false){
   return (
    <div>
        <div>
@@ -26,5 +28,6 @@ export default function HourlyForecast(props){
               
        </div>
    </div>
-  );
+  );}
+  else return <Navigate to="/" replace={true}/>
 }

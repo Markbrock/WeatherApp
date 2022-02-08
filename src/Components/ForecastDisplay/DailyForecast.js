@@ -2,15 +2,17 @@
 import Grid from '@material-ui/core/Grid';
 import DayReport from './DayReport'
 import { useState,useEffect } from 'react'
+import {Navigate} from 'react-router-dom'
 
 
 export default function DailyForecast(props){
-    
+    if (props.weather != false){
   return (
    <div>
+  
        <div>
        
-                <Grid className="forecast" container spacing={3}>
+                <Grid className="forecast" justifyContent='space-evenly' container spacing={3}>
                 {props.weather.daily.map((daily) => (
                   
                   <DayReport 
@@ -26,5 +28,6 @@ export default function DailyForecast(props){
               
        </div>
    </div>
-  );
+  );} 
+  else return (<Navigate to="/" replace={true}/>);
 }
